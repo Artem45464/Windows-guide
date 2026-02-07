@@ -1,6 +1,6 @@
 # Install Windows on Mac – Complete Guide (Intel & Apple Silicon)
 
-A full step-by-step guide to installing Windows on macOS, covering **Intel Macs (Boot Camp)** and **Apple Silicon Macs (M1/M2/M3)** with screenshots, troubleshooting, and performance tips.
+A full step-by-step guide to installing Windows on macOS, covering **Intel Macs (Boot Camp)** and **Apple Silicon Macs (M1/M2/M3/M4)** with troubleshooting and performance tips.
 
 ---
 
@@ -13,24 +13,21 @@ A full step-by-step guide to installing Windows on macOS, covering **Intel Macs 
 ---
 
 ## 📥 Download Windows (Official)
-
+ 
 Download Windows **only from Microsoft**.
 
 ### Windows 11
 https://www.microsoft.com/software-download/windows11
 
 - Intel Macs → Download **Windows 11 ISO (x64)**
-- Apple Silicon (M1/M2/M3) → Download **Windows 11 ARM**
+- Apple Silicon (M1/M2/M3/M4) → Download **Windows 11 ARM**
 
 ### Windows 10 (Intel Macs only)
 https://www.microsoft.com/software-download/windows10
 
-> ⚠️ Apple Silicon Macs **cannot** use Windows 10 with Boot Camp.
+> ⚠️ Both Windows 10 and 11 work. Windows 11 recommended for newer Macs (2016+), Windows 10 for older (2011-2015).
 
 ---
-
-
-
 
 ## ⚠️ Important Before You Start
 
@@ -40,19 +37,121 @@ https://www.microsoft.com/software-download/windows10
 - A **valid Windows license key**
 - Know your Mac type:
   - **Intel Mac** → Boot Camp
-  - **Apple Silicon (M1/M2/M3)** → Virtual Machine
+  - **Apple Silicon (M1/M2/M3/M4)** → Virtual Machine (Parallels or UTM)
 
 ---
 
 ## 🧠 Check Your Mac Type
 
-1. Click **Apple menu  → About This Mac**
+1. Click **Apple menu → About This Mac**
 2. Look for:
    - **Processor: Intel** → Use Boot Camp
-   - **Chip: Apple M1 / M2 / M3** → Use Parallels or UTM
+   - **Chip: Apple M1 / M2 / M3 / M4** → Use Parallels or UTM
+
+**Software & Files:**
+- [ ] macOS is up-to-date
+- [ ] Windows 11 ISO downloaded from microsoft.com
+- [ ] Windows product key ready (25 characters)
+- [ ] Important files backed up (especially if on C: drive will be reformatted)
+
+**Settings:**
+- [ ] FileVault encryption is OFF (disable in System Preferences → Security & Privacy)
+- [ ] You know your Mac password
+- [ ] You have admin access on your Mac
+- [ ] Automatic sleep is disabled (System Preferences → Energy Saver)
+
+**Time & Environment:**
+- [ ] You have 1-2 hours uninterrupted (installation takes 30-60 minutes)
+- [ ] No important work open on Mac
+- [ ] Close unnecessary applications
+- [ ] Disable external monitors if possible (optional but recommended)
 
 ---
 
+
+
+## 📖 Installation Steps
+
+### Check Your Mac Type
+
+1. Click **Apple menu  → About This Mac**
+2. Look for:
+   - **Processor: Intel** → Use Boot Camp
+   - **Chip: Apple M1 / M2 / M3 / M4** → Use Parallels or UTM
+
+---
+## 💻 System Requirements by Mac Type
+
+### Intel Macs (Boot Camp)
+
+**✅ CAN Install:**
+- **Processor:** Intel Core i5, i7, or i9
+- **RAM:** 4 GB minimum (8 GB+ recommended)
+- **Storage:** 64 GB free (128 GB+ strongly recommended)
+- **macOS:** Big Sur (11) or later
+- **USB:** Optional (needed if no built-in drive)
+
+**Supported Intel Mac Models:**
+- MacBook Pro (2012 or later)
+- MacBook Air (2011 or later)
+- Mac mini (2011 or later)
+- iMac (2011 or later)
+- Mac Pro (2013 or later)
+
+**❌ CANNOT Install:**
+- Apple Silicon Macs (M1/M2/M3/M4) - must use virtual machine
+- iMac (2007-2010, Core 2 Duo)
+- MacBook (2007-2009)
+- Mac mini (2006-2010)
+- iMac (2006, Core Duo)
+
+**Storage Breakdown:**
+| Component | Space Needed |
+|-----------|-------------|
+| Windows 11 OS | ~30 GB |
+| Windows Updates | 10-20 GB |
+| Applications | 10-30 GB |
+| Personal Files | Variable |
+| Minimum Free (safety) | 5 GB |
+| **TOTAL** | **64+ GB** |
+
+---
+
+### Apple Silicon Macs (M1/M2/M3/M4 – Virtual Machine)
+
+**✅ CAN Install:**
+- **Chip:** Apple M1, M1 Pro, M1 Max, M2, M2 Pro, M2 Max, M3, M3 Pro, M3 Max, M4
+- **RAM:** 8 GB minimum (16 GB+ recommended for smooth performance)
+- **Storage:** 64 GB free (128 GB+ recommended)
+- **macOS:** Monterey (12) or later
+- **VM Software:** Parallels Desktop ($99-149/year) or UTM (free)
+
+**Performance Notes:**
+- Windows runs at ~60-70% of native speed (in virtual machine)
+- Good for productivity, office work, web browsing
+- NOT recommended for gaming
+
+**Storage Allocation:**
+| Component | Space Needed |
+|-----------|-------------|
+| VM Overhead | 5-10 GB |
+| Windows 11 ARM | ~30 GB |
+| Updates & Programs | 20-30 GB |
+| Reserve Space | 5 GB |
+| **TOTAL** | **60-75 GB** |
+
+---
+
+## 📊 Quick Compatibility Check
+
+| Mac Type | Can Use Boot Camp? | Can Use Virtual Machine? | Recommended |
+|----------|-------------------|--------------------------|-------------|
+| Intel (2011+) | ✅ Yes | ❌ No (slow) | Boot Camp |
+| Intel (2007-2010) | ❌ No | ⚠️ Possible but very slow | Not recommended |
+| M1/M2/M3/M4 | ❌ No | ✅ Yes | Parallels or UTM |
+| PowerPC (G3/G4/G5) | ❌ No | ❌ No | Impossible |
+
+---
 # 🖥️ OPTION 1: Intel Macs (Boot Camp – Dual Boot)
 
 ### ✅ Best for
@@ -64,7 +163,7 @@ https://www.microsoft.com/software-download/windows10
 
 ## 🔧 Requirements
 - Intel-based Mac
-- macOS Monterey or earlier (Boot Camp still supported)
+- macOS Big Sur or later (Boot Camp supported on recent versions)
 - USB drive (if required)
 - Windows 10 or 11 ISO
 
@@ -293,9 +392,10 @@ Monitor Windows Update progress:
 - Easy to manage
 
 ### ⚠️ Important
-- **Boot Camp is NOT available** for Apple Silicon
-- **Windows 11 ARM** required
-- Runs as a **virtual machine** (slower than native)
+- **Boot Camp is NOT available** for Apple Silicon (M1/M2/M3/M4)
+- **Windows 11 ARM** required (x64 not compatible)
+- Runs as a **virtual machine** (slower than native, ~60-70% of native speed)
+- Excellent for productivity but **not recommended for gaming**
 
 ---
 
@@ -351,6 +451,94 @@ Monitor Windows Update progress:
 - **Microsoft Support:** support.microsoft.com
 - **Apple Boot Camp Guide:** support.apple.com/boot-camp
 - **Windows Activation Issues:** microsoft.com/windows/activation
+- **Windows 11 System Requirements:** microsoft.com/windows/windows-11-specifications
+- **Parallels Desktop:** parallels.com
+- **UTM (Free VM):** mac.getutm.app
+
+---
+
+## 💾 Backup & Recovery Guide
+
+### Before Installation (Critical!)
+
+1. **Time Machine Backup:**
+   - Plug in external drive (500 GB+ recommended)
+   - **System Preferences → Time Machine**
+   - Click **Select Backup Disk** → Choose your drive
+   - Click **Back Up Now**
+   - Wait until complete (may take 2-4 hours)
+
+2. **What to Backup Manually:**
+   - Important documents (cloud or external drive)
+   - Photos and videos
+   - Email archives
+   - Passwords (use password manager)
+   - SSH keys and certificates
+
+### If Windows Breaks/Won't Boot
+
+**Option 1: Use Boot Camp Assistant to Restore**
+1. Restart to macOS
+2. **Finder → Applications → Utilities → Boot Camp Assistant**
+3. Click **Restore** → Windows partition removed, space reclaimed
+
+**Option 2: Restore from Time Machine**
+1. Restart holding **Command + R** (Recovery Mode)
+2. **Utilities → Restore from Time Machine**
+3. Select backup point before Windows installation
+4. Complete restore (may take 1-2 hours)
+
+**Option 3: Start Over**
+- Remove Windows partition via Boot Camp Assistant
+- Create backup from Time Machine first
+- Reinstall Windows fresh
+
+---
+
+## 🔧 Common Windows Installation Errors
+
+| Error | What It Means | Solution |
+|-------|---------------|----------|
+| **"Cannot find installation files"** | Windows ISO not found or corrupted | Re-download Windows ISO from microsoft.com |
+| **"0xC1900101"** | Incompatible drivers or USB issue | Use different USB drive, disable USB hubs |
+| **"0x80070005"** | Permission issues | Run as Administrator, disable antivirus |
+| **"Partition not found"** | BOOT CAMP partition missing/corrupted | Use Disk Utility to check partition, reinstall |
+| **"Installation disk cannot be found"** | Drive not recognized | Reformat USB as FAT32, reinstall Windows image |
+| **"Your PC ran into a problem"** | General installation failure | Restart and try again, check disk space (64+ GB) |
+| **"FileVault interference"** | macOS encryption blocking installation | Disable FileVault before installation |
+
+**For any error:** 1. Write down the error code/message
+2. Restart and try again (often works)
+3. Check [microsoft.com/windows/windows-update-errors](https://microsoft.com/windows/windows-update-errors)
+4. Post error code in r/bootcamp or Stack Exchange
+
+---
+
+## 📚 Glossary – Technical Terms Explained
+
+**BIOS** — Basic Input/Output System. Firmware that starts your Mac before Windows loads. Macs use EFI/UEFI instead.
+
+**Boot Camp** — Apple's dual-boot tool for Intel Macs. Partitions drive and installs Windows natively.
+
+**Driver** — Software that lets Windows control Mac hardware (trackpad, graphics, audio). Boot Camp drivers are essential.
+
+**EFI/UEFI** — Firmware standard on modern Macs. Replaces older BIOS. Handles startup before OS loads.
+
+**Firmware** — Low-level software built into Mac hardware. Controls before operating system starts.
+
+**ISO File** — Disk image file containing complete Windows installation. Downloaded from Microsoft.
+
+**Kernel Panic** — Critical macOS error (similar to Windows "Blue Screen"). Usually shows panic log with error.
+
+**Partition** — Separate section of hard drive. Boot Camp creates one for Windows, keeps macOS on another.
+
+**Product Key** — 25-character code that activates Windows. Required for permanent license.
+
+**Recovery Mode** — macOS diagnostic/repair mode. Access by holding **Command + R** during startup.
+
+**Sector/Block** — Smallest unit of disk storage. Partitioning divides drive into partitions made of sectors.
+
+**Virtual Machine** — Software that simulates a computer. Parallels/UTM run Windows inside macOS instead of native.
 
 ---
 
@@ -362,13 +550,15 @@ Monitor Windows Update progress:
 - Keep Windows updated
 - Install Boot Camp drivers
 - Have a valid Windows license
+- Check FAQ.md for common questions
 
 ❌ **DON'T:**
 - Use unofficial Windows downloads
 - Skip driver installation
 - Fill your Windows partition completely
 - Run without backups
+- Ignore FileVault warning
 
 ---
 
-**Last Updated:** January 2026
+**Last Updated:** February 2026
