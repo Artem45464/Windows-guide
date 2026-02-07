@@ -4,7 +4,15 @@
 
 ## Installation & Setup
 
-### Q: Can I use this on Apple Silicon (M1/M2/M3)?
+### Q: Should I use Windows 10 or Windows 11?
+**A:** 
+- **Windows 11** recommended for Macs 2016 or newer (better support, longer updates)
+- **Windows 10** for older Macs 2011-2015 (more compatible, still works great)
+- Both work fine on Boot Camp
+- Windows 10 support ends October 2025
+- Windows 11 support continues until 2026+
+
+### Q: Can I use this on Apple Silicon (M1/M2/M3/M4)?
 **A:** No. Boot Camp only works on **Intel Macs**. Apple Silicon users need virtual machines like Parallels Desktop or UTM. See [README.md](README.md) for details.
 
 ### Q: How much disk space do I need?
@@ -59,7 +67,10 @@
 ### Q: My product key doesn't work. What do I do?
 **A:** 
 - Verify you entered it correctly (25 characters, dashes matter)
-- Ensure you're using a **Windows 11** key (not Windows 10)
+- Ensure you're using the **correct Windows version** key:
+  - Windows 10 key for Windows 10 installation
+  - Windows 11 key for Windows 11 installation
+  - Keys are not interchangeable between versions!
 - Keys from other computers won't work
 - Wait 24 hours — Microsoft validates in background
 - Contact Microsoft Support if still failing
@@ -148,10 +159,11 @@
 
 ### Q: What's the best macOS version for Boot Camp?
 **A:** 
-- **macOS Monterey (12)**: Recommended, stable
-- **macOS Big Sur (11)**: Works well
-- **macOS Ventura (13)+**: Works but less tested
-- Avoid very old versions; updates may be limited
+- **macOS Big Sur (11) or later**: Recommended and stable
+- **macOS Monterey (12)**: Works well
+- **macOS Ventura (13)**: Works well
+- **macOS Sonoma (14)+**: Works, fully tested
+- Avoid very old versions (pre-Big Sur); support may be limited
 
 ### Q: Should I disable FileVault before installing?
 **A:** Yes! FileVault encryption can interfere with Boot Camp. Disable it before installation, then re-enable on macOS if desired.
@@ -166,11 +178,14 @@
 ### Q: How much does Boot Camp cost?
 **A:** **Free!** It's built into every Intel Mac. You only pay for Windows license.
 
-### Q: How much does Windows 11 cost?
+### Q: How much does Windows cost?
 **A:** 
-- Windows 11 Home: ~$140 USD
-- Windows 11 Pro: ~$200 USD
+- **Windows 11 Home**: ~$140 USD
+- **Windows 11 Pro**: ~$200 USD
+- **Windows 10 Home**: ~$120 USD (being phased out)
+- **Windows 10 Pro**: ~$200 USD
 - Often included free or discounted with new computers
+- Both available from microsoft.com or authorized retailers
 
 ### Q: Can I use Windows 10 on newer Macs?
 **A:** Yes, on Intel Macs. But **Windows 11 is recommended** for better compatibility.
@@ -185,4 +200,4 @@ Check the **[detailed README.md](README.md)** or contact:
 
 ---
 
-**Last Updated:** January 2026
+**Last Updated:** February 2026
