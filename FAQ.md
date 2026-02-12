@@ -187,6 +187,9 @@
 - Often included free or discounted with new computers
 - Both available from microsoft.com or authorized retailers
 
+### Q: Can I upgrade from Windows 10 to Windows 11 on unsupported hardware?
+**A:** Yes! If your Mac doesn't meet Windows 11 requirements (TPM 2.0, newer CPU), you can bypass these checks. See **[bypass windows 10 to windows 11.md](bypass%20windows%2010%20to%20windows%2011.md)** for step-by-step instructions.
+
 ### Q: Can I use Windows 10 on newer Macs?
 **A:** Yes, on Intel Macs. But **Windows 11 is recommended** for better compatibility.
 
