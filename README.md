@@ -8,6 +8,7 @@ A full step-by-step guide to installing Windows on macOS, covering **Intel Macs 
 
 - ⚡ **[QUICK-START.md](QUICK-START.md)** — 5-minute summary (recommended for most users)
 - ❓ **[FAQ.md](FAQ.md)** — Answers to 40+ common questions
+- 🔓 **[bypass windows 10 to windows 11.md](bypass%20windows%2010%20to%20windows%2011.md)** — Upgrade to Windows 11 on unsupported hardware
 - 📖 **README.md** — Complete detailed guide (you are here)
 
 ---
