@@ -98,4 +98,4 @@ After installation:
 
 ---
 
-**Last Updated:** February 2025
+**Last Updated:** February 2026
